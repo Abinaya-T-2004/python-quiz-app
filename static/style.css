@@ -1,0 +1,388 @@
+body.dark-theme {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px red;
+  text-align: center;
+  width: 300px;
+  animation: slideIn 0.5s ease;
+}
+
+.login-container h2 {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #222;
+  border: 1px solid red;
+  color: white;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #ff4c4c;
+}
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.options-row input[type="checkbox"] {
+  accent-color: red;
+  margin-right: 5px;
+}
+
+.forgot-password {
+  color: red;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: #ff4c4c;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-container a {
+  color: red;
+  text-decoration: none;
+}
+
+/* ---------- DARK THEME BODY ---------- */
+body.dark-theme {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ---------- NAVBAR AT TOP ---------- */
+.navbar {
+  width: 100%;
+  position: fixed;       /* ✅ Makes it stay at the top */
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0 60px 0 0;  /* ✅ Add right padding */
+}
+
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: red;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  
+}
+
+.navbar .nav-links a:hover {
+  color: #ff4c4c;
+}
+
+/* ---------- DASHBOARD BODY FIX ---------- */
+.dashboard-content {
+  padding-top: 100px;  /* ✅ Adds space so content doesn't hide behind fixed navbar */
+  text-align: center;
+}
+
+/* ---------- DASHBOARD CONTENT ---------- */
+.dashboard-content {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.dashboard-content h2 {
+  font-size: 36px;
+  color: #ff4c4c;
+  margin-bottom: 10px;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.dashboard-content p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+  animation: fadeIn 0.9s ease-in;
+}
+
+/* ---------- BUTTON ---------- */
+.start-btn {
+  padding: 12px 30px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 0 8px red;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-btn:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.quiz-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.quiz-container h2 {
+  color: red;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.level-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.level-btn {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  width: 220px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 0 10px red;
+}
+
+/* Individual colors for each difficulty */
+.beginner {
+  background-color: #2ecc71; /* green */
+}
+.beginner:hover {
+  background-color: #27ae60;
+}
+
+.intermediate {
+  background-color: #f39c12; /* orange */
+}
+.intermediate:hover {
+  background-color: #e67e22;
+}
+
+.advanced {
+  background-color: #e74c3c; /* red */
+}
+.advanced:hover {
+  background-color: #c0392b;
+}
+
+
+
+
+
+.quiz-question-container {
+  max-width: 600px;
+  margin: 100px auto 30px;
+  height: 400px;
+  width: 350px;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px red;
+  text-align: left;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.quiz-question-container h3 {
+  margin-bottom: 10px;
+  color: red;
+}
+
+.question-text {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #fff;
+}
+.question-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.option-label {
+  display: block;
+  margin: 8px 0;
+  font-size: 16px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.option-label input[type="radio"] {
+  margin-right: 10px;
+  accent-color: red;
+  cursor: pointer;
+}
+
+.next-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #ff3333;
+}
+
+
+
+
+
+
+
+
+.result-container {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px red;
+  width: 350px;
+  text-align: center;
+  margin: 100px auto;
+  animation: slideIn 0.4s ease;
+}
+
+.result-container h2 {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.result-score {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.result-score span {
+  font-weight: bold;
+  color: #ff4c4c;
+}
+
+.dashboard-btn {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.dashboard-btn:hover {
+  background-color: #ff1c1c;
+}
+
+
+
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

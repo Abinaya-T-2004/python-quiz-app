@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz - {{ question.q[:20] }}...</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark-theme">
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="logo">Python Quiz</div>
+    <ul class="nav-links">
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Main Quiz Content -->
+  <div class="quiz-question-container">
+    <h3>Question {{ index }} of {{ total }}</h3>
+    <p class="question-text">{{ question.q }}</p>
+
+    <form method="POST" class="quiz-form">
+      {% for option in question.options %}
+        <label class="option-label">
+          <input type="radio" name="answer" value="{{ option }}" required>
+          {{ option }}
+        </label><br>
+      {% endfor %}
+
+      <button type="submit" class="next-btn">Next</button>
+    </form>
+  </div>
+
+</body>
+</html>

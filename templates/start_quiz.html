@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ level.capitalize() }} Quiz</title>
+</head>
+<body>
+  <h2>{{ level.capitalize() }} Level Quiz</h2>
+
+  <form method="POST">
+    {% for i in range(questions|length) %}
+      <p><b>{{ i + 1 }}. {{ questions[i].q }}</b></p>
+
+      {% for option in questions[i].options %}
+        <label>
+          <input type="radio" name="q{{ i }}" value="{{ option }}" required>
+          {{ option }}
+        </label><br>
+      {% endfor %}
+
+      <hr>
+    {% endfor %}
+
+    <button type="submit">Submit Answers</button>
+  </form>
+</body>
+</html>

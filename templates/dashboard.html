@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Python Quiz</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark-theme">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Python Quiz</div>
+    <ul class="nav-links">
+      <li><a href="/dashboard">Home</a></li>
+      <li><a href="/quiz">Start Quiz</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard Content -->
+  <div class="dashboard-content">
+    <h2>Welcome, {{ username }}!</h2>
+    <p>Select a level to start your Python interview quiz.</p>
+    <a href="/quiz" class="start-btn">Start Quiz</a>
+  </div>
+
+</body>
+</html>
