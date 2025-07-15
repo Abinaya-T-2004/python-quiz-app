@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 app.secret_key = 'supersecretkey'  # secret key for session
 
 # ---------- DATABASE SETUP ----------
@@ -45,7 +45,7 @@ def register():
         try:
             c.execute("INSERT INTO users (username, password) VALUES (?, ?)", (uname, pwd))
             conn.commit()
-            return redirect('/login')
+            return redirect('/')
         except sqlite3.IntegrityError:
             return "Username already exists!"
         finally:
@@ -70,7 +70,7 @@ def login():
             return redirect('/dashboard')
         else:
             return "Invalid credentials!"
-    return render_template('login.html')
+    return render_template('index.html')
 
 # ---------- DASHBOARD ----------
 @app.route('/dashboard')
